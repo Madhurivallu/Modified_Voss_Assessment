@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\MADHURI\eclipse-workspace\Voss_Tech_Assessment1\testng.xml</span>
+                    <span>C:\Users\MADHURI\git\Voss_Assessment1\Voss_Tech_Assessment1\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 4 failed,   6 passed</span>
+                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,16 +102,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Voss_Ultimate.Ultimateqa_class" class="method navigator-link" hash-for-method="Login_User_details">Login_User_details</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Voss_Ultimate.Ultimateqa_class" class="method navigator-link" hash-for-method="Login_User_details">Login_User_details</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Voss_Ultimate.Ultimateqa_class" class="method navigator-link" hash-for-method="click_on_Fake_Pricing_page">click_on_Fake_Pricing_page</a> <!-- method navigator-link -->
@@ -131,6 +121,16 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Voss_Ultimate.Ultimateqa_class" class="method navigator-link" hash-for-method="Login_User_details">Login_User_details</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Voss_Ultimate.Ultimateqa_class" class="method navigator-link" hash-for-method="Login_User_details">Login_User_details</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Voss_Ultimate.Ultimateqa_class" class="method navigator-link" hash-for-method="click_Fill_out_Forms">click_Fill_out_Forms</a> <!-- method navigator-link -->
@@ -181,76 +181,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login_User_details">
-                  </a> <!-- Login_User_details -->
-                  <span class="method-name">Login_User_details</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;sign_in_071344d6b9&quot;]/div[5]/button&quot;}
-  (Session info: chrome=109.0.5414.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-4HIL3QSE&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MADHURI\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61729}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 00420593500c0367505ce725b9df2efa
-*** Element info: {Using=xpath, value=//*[@id=&quot;sign_in_071344d6b9&quot;]/div[5]/button}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at Voss_Ultimate.Ultimateqa_class.Login_User_details(Ultimateqa_class.java:127)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Login_User_details">
-                  </a> <!-- Login_User_details -->
-                  <span class="method-name">Login_User_details</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;sign_in_071344d6b9&quot;]/div[5]/button
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-4HIL3QSE&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 109.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230112150232, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 174636, moz:profile: C:\Users\MADHURI\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5b843d10-2ed0-453d-9a42-e7ab1b3b9582
-*** Element info: {Using=xpath, value=//*[@id=&quot;sign_in_071344d6b9&quot;]/div[5]/button}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at Voss_Ultimate.Ultimateqa_class.Login_User_details(Ultimateqa_class.java:127)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="click_on_Fake_Pricing_page">
                   </a> <!-- click_on_Fake_Pricing_page -->
                   <span class="method-name">click_on_Fake_Pricing_page</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Purchase&quot;}
-  (Session info: chrome=109.0.5414.75)
+  (Session info: chrome=109.0.5414.120)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-4HIL3QSE&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;LAPTOP-4HIL3QSE&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MADHURI\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61729}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 00420593500c0367505ce725b9df2efa
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\MADHURI\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56898}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ec55913540874b82b46b726f8e27f28f
 *** Element info: {Using=link text, value=Purchase}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -262,7 +203,7 @@ Session ID: 00420593500c0367505ce725b9df2efa
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
 	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at Voss_Ultimate.Ultimateqa_class.click_on_Fake_Pricing_page(Ultimateqa_class.java:205)
+	at Voss_Ultimate.Ultimateqa_class.click_on_Fake_Pricing_page(Ultimateqa_class.java:197)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -276,10 +217,10 @@ Session ID: 00420593500c0367505ce725b9df2efa
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: Purchase
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LAPTOP-4HIL3QSE&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;LAPTOP-4HIL3QSE&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 109.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230112150232, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 174636, moz:profile: C:\Users\MADHURI\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5b843d10-2ed0-453d-9a42-e7ab1b3b9582
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 109.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230112150232, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 74816, moz:profile: C:\Users\MADHURI\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bd44a91c-78ff-450d-a79b-083b0af6f4d7
 *** Element info: {Using=link text, value=Purchase}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -291,7 +232,7 @@ Session ID: 5b843d10-2ed0-453d-9a42-e7ab1b3b9582
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
 	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at Voss_Ultimate.Ultimateqa_class.click_on_Fake_Pricing_page(Ultimateqa_class.java:205)
+	at Voss_Ultimate.Ultimateqa_class.click_on_Fake_Pricing_page(Ultimateqa_class.java:197)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -305,6 +246,20 @@ Session ID: 5b843d10-2ed0-453d-9a42-e7ab1b3b9582
               <span class="class-name">Voss_Ultimate.Ultimateqa_class</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_User_details">
+                  </a> <!-- Login_User_details -->
+                  <span class="method-name">Login_User_details</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login_User_details">
+                  </a> <!-- Login_User_details -->
+                  <span class="method-name">Login_User_details</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="click_Fill_out_Forms">
@@ -352,7 +307,7 @@ Session ID: 5b843d10-2ed0-453d-9a42-e7ab1b3b9582
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\MADHURI\eclipse-workspace\Voss_Tech_Assessment1\testng.xml</span>
+            <span class="header-content">C:\Users\MADHURI\git\Voss_Assessment1\Voss_Tech_Assessment1\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -415,43 +370,43 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Login_User_details')
 data.setCell(0, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(0, 3, 15754);
+data.setCell(0, 3, 13262);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Login_User_details')
+data.setCell(1, 1, 'click_on_Fake_Pricing_page')
 data.setCell(1, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(1, 3, 13532);
+data.setCell(1, 3, 13254);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'click_on_Fake_Pricing_page')
 data.setCell(2, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(2, 3, 12778);
+data.setCell(2, 3, 13032);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'click_on_Fake_Pricing_page')
+data.setCell(3, 1, 'Login_User_details')
 data.setCell(3, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(3, 3, 11903);
+data.setCell(3, 3, 9828);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'click_Fill_out_Forms')
 data.setCell(4, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(4, 3, 4772);
+data.setCell(4, 3, 4703);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'click_Fill_out_Forms')
 data.setCell(5, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(5, 3, 3670);
+data.setCell(5, 3, 4082);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'testPageTitle')
 data.setCell(6, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(6, 3, 2762);
+data.setCell(6, 3, 3103);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testPageTitle')
 data.setCell(7, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(7, 3, 2695);
+data.setCell(7, 3, 2683);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'testScreenshot')
 data.setCell(8, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(8, 3, 2567);
+data.setCell(8, 3, 522);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'testScreenshot')
 data.setCell(9, 2, 'Voss_Ultimate.Ultimateqa_class')
-data.setCell(9, 3, 2288);
+data.setCell(9, 3, 237);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -489,63 +444,59 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">testPageTitle</span>
-                <span class="method-start">2727 ms</span>
+                <span class="method-start">2906 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testScreenshot</span>
-                <span class="method-start">5428 ms</span>
+                <span class="method-start">6023 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Login_User_details</span>
-                <span class="method-start">7995 ms</span>
+                <span class="method-start">6546 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">click_Fill_out_Forms</span>
-                <span class="method-start">21527 ms</span>
+                <span class="method-start">16377 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">click_on_Fake_Pricing_page</span>
-                <span class="method-start">25206 ms</span>
+                <span class="method-start">20468 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">37113 ms</span>
+                <span class="method-start">33517 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(firefox)</span>
-                <span class="method-start">37909 ms</span>
+                <span class="method-start">34763 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">testPageTitle</span>
-                <span class="method-start">44508 ms</span>
+                <span class="method-start">41043 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testScreenshot</span>
-                <span class="method-start">47272 ms</span>
+                <span class="method-start">43741 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Login_User_details</span>
-                <span class="method-start">49562 ms</span>
+                <span class="method-start">43981 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">click_Fill_out_Forms</span>
-                <span class="method-start">65317 ms</span>
+                <span class="method-start">57248 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">click_on_Fake_Pricing_page</span>
-                <span class="method-start">70102 ms</span>
+                <span class="method-start">61955 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">82881 ms</span>
+                <span class="method-start">75214 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

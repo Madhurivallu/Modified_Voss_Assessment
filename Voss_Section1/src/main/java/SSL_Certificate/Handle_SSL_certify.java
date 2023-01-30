@@ -1,6 +1,5 @@
 package SSL_Certificate;
 
-import java.io.IOException;
 import java.net.URL;
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
@@ -23,6 +22,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Handle_SSL_certify {
@@ -33,8 +33,9 @@ public class Handle_SSL_certify {
      
   @Parameters("browser") 
    @BeforeTest
-    public void setUp(String browser) {
+    public void setUp(String browser) throws Exception {
         // Initialize the WebDriver based on the browser parameter
+	 
         if (browser.equalsIgnoreCase("chrome")){
         	WebDriverManager.chromedriver().setup();
     		driver = new ChromeDriver();
@@ -61,46 +62,45 @@ public class Handle_SSL_certify {
 			}
   @Test
   
-	 public void testSSL() throws IOException {
+	 public void testSSL() throws Exception {
 	        test = extent1.createTest("Test SSL Certificate");
+	        ScreenRecorderUtil.startRecord("testSSL");
 	        driver.get("https://www.ultimateqa.com");
-	        test.log(Status.INFO, "Navigated to https://www.ultimateqa.com");
+	        Thread.sleep(2000);
+	        test.log(Status.PASS, "Navigated to https://www.ultimateqa.com");
 
 	        // identify SSL certificate
 	        URL url = new URL("https://www.ultimateqa.com");
 	        HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
 	        conn.connect();
 	        X509Certificate cert = (X509Certificate) conn.getServerCertificates()[0];
-	        test.log(Status.INFO, "Identified SSL certificate for this website");
+	        test.log(Status.PASS, "Identified SSL certificate for this website");
 
 	        // validate SSL certificate details
 	        Date expiry = cert.getNotAfter();
 		    Date current = new Date();
 		    if (current.after(expiry)) {
-		        System.out.println("SSL certificate has expired.");
+		        System.out.println("SSL certificate has expired");
 		    } else {
-		        System.out.println("SSL certificate is valid.");
+		        System.out.println("SSL certificate is valid");
 		    }
 		    System.out.println("Subject: " + cert.getSubjectDN());
 		    System.out.println("Issuer: " + cert.getIssuerDN());
 		    System.out.println("Expiry: " + expiry);
   
-
-
-	                test.log(Status.INFO, "Expiry date of SSL certificate: " + expiry);
+		    	test.log(Status.PASS, "Expiry date of SSL certificate: " + expiry);
 	                if (expiry.before(new Date())) {
 	                    test.log(Status.FAIL, "SSL certificate has expired");
 	                } else {
 	                    test.log(Status.PASS, "SSL certificate is valid");
 	                }
+	                
 	            }
-	        
-
 	@AfterTest
-    public void tearDown() {
+    public void tearDown() throws Exception {
         // Close the browser
         driver.quit();
-
+        ScreenRecorderUtil.stopRecord();
         // End the test and flush the report
         
         extent1.flush();

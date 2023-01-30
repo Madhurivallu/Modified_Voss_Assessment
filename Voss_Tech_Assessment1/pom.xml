@@ -49,15 +49,21 @@
     <artifactId>selenium-server</artifactId>
     <version>3.141.59</version>
 </dependency>
+
+<!-- https://mvnrepository.com/artifact/com.github.stephenc.monte/monte-screen-recorder -->
+<dependency>
+    <groupId>com.github.stephenc.monte</groupId>
+    <artifactId>monte-screen-recorder</artifactId>
+    <version>0.7.7.0</version>
+</dependency>
+
+
 <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
 <dependency>
     <groupId>net.sourceforge.tess4j</groupId>
     <artifactId>tess4j</artifactId>
     <version>4.5.4</version>
 </dependency>
-
-
-
 
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
@@ -90,14 +96,7 @@
     <version>4.1.2</version>
 </dependency>
 
-
-
-		<dependency>
-			<groupId>Voss_Assessment</groupId>
-			<artifactId>Voss_Assessment</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+</dependencies>
 
 <build>
 

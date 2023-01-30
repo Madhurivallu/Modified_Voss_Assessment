@@ -1,5 +1,4 @@
 package Voss_Ultimate;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -28,6 +27,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.beust.jcommander.Parameter;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
@@ -40,16 +40,19 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 public class Ultimateqa_class { 
-     
+	
+	
 	public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extent1;
 	public ExtentTest extentTest;
+	
 	 static WebDriver driver = null;
      
   @Parameters("browser") 
    @BeforeTest
-    public void setUp(String browser) {
+    public void setUp(String browser) throws Exception {
         // Initialize the WebDriver based on the browser parameter
+	  
         if (browser.equalsIgnoreCase("chrome")){
         	WebDriverManager.chromedriver().setup();
     		driver = new ChromeDriver();
@@ -60,8 +63,10 @@ public class Ultimateqa_class {
         	 driver = new FirefoxDriver();
         	 System.out.println("firefox is lanched");
         }
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         
         // Initialize the ExtentReports object 
         htmlReporter = new ExtentHtmlReporter("target/extent1.html");
@@ -72,11 +77,14 @@ public class Ultimateqa_class {
 		extent1.setSystemInfo("Tester", "Madhuri");
 		extent1.setSystemInfo("Browser", "Chrome");
 		extent1.attachReporter(htmlReporter);
+		
 	
     }
     @Test(priority=1)
-    public void testPageTitle() {
+    public void testPageTitle() throws Exception {
         // Start the test
+    
+    	
         extentTest = extent1.createTest("Ultimateqa Title", "Verify the page title of the Ultimateqa Website");
 
         // Open the website
@@ -103,20 +111,18 @@ public class Ultimateqa_class {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // Test Case 3: Maximize the browser window
-        driver.manage().window().maximize();
-        Thread.sleep(2000);
 
         }
     @Test(priority=3)
 	public void Login_User_details() throws Throwable {
     	extentTest = extent1.createTest("login user details");
+    	
 	driver.get("https://www.ultimateqa.com/automation/");
 	 extentTest.log(Status.PASS, "Navigate to https://www.ultimateqa.com/automation/ ");
 	
 	 driver.findElement(By.linkText("Login automation")).click();
 	 extentTest.log(Status.PASS, "click on Login Automation");
-	 
+	// Thread.sleep(2000);
 	 //enter user name
 	 driver.findElement(By.id("user[email]")).sendKeys("madhurivallu93@gmail.com");
 	 extentTest.log(Status.PASS, "Enter username ");
@@ -124,38 +130,23 @@ public class Ultimateqa_class {
 	driver.findElement(By.id("user[password]")).sendKeys("Madhu3@3");
 	 extentTest.log(Status.PASS, "Enter password");
 	
-	driver.findElement(By.xpath("//*[@id=\"sign_in_071344d6b9\"]/div[5]/button")).click();
-	 extentTest.log(Status.FAIL, "click on sign in button");
-	Thread.sleep(2000);
+	 driver.findElement(By.xpath("/html/body/main/div/div/article/form/div[5]/button")).click();
+	 extentTest.log(Status.PASS, "click on sign in button");
+	 Thread.sleep(2000);
 	extentTest = extent1.createTest("login user details");
-	 try {
-	    WebElement captcha = driver.findElement(By.id("//*[@id=\"rc-imageselect-target\"]/table/tbody/tr[2]/td[1]/div/div[2]"));
-	    if (captcha.isDisplayed()) {
-	        // Perform actions for when the captcha is present
-	    	File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	    	 // Use Tesseract OCR to extract text from the image
-	        ITesseract tesseract = new Tesseract();
-	        tesseract.setDatapath("target/to/tessdata");
-	        String captchaText = tesseract.doOCR(screenshot);
-            // Enter captcha text in the text field
-	        WebElement captchaField = driver.findElement(By.id("recaptcha-verify-button"));
-	        captchaField.sendKeys(captchaText);
-	        // Submit the form
-	        captchaField.submit();
-	        System.out.println("Captcha is present on the page, please enter the captcha");
-	    } else {
-	        // Perform actions for when the captcha is not present
-	        System.out.println("Captcha is not present on the page, proceeding with the test");
-	    }
-	} catch (NoSuchElementException e) {
-	    // Perform actions for when the captcha element is not found on the page
-	    System.out.println("Captcha element not found on the page, proceeding with the test");
-
-	}
-	 extentTest = extent1.createTest("click to enter captcha failed");
+	  // Go to the drop down button
+   WebElement dropdown = driver.findElement(By.xpath("/html/body/header/div[2]/div/nav/ul/li[2]/button/i"));
+   dropdown.click();
+   // Go to the sign out from page
+   driver.findElement(By.linkText( "Sign Out")).click();
+   
+	
  }
 	@Test(priority=4)
 	public void click_Fill_out_Forms() throws Throwable {
+		
+		
+		
 		extentTest = extent1.createTest("check in fill out forms details");
             driver.get("https://ultimateqa.com/automation/");
             extentTest.log(Status.PASS, "Browse to https://www.automationqa.com/ and log in");
@@ -185,11 +176,12 @@ public class Ultimateqa_class {
 			 extentTest.log(Status.FAIL, "Enter numeric captcha ");
 			driver.findElement(By.name("et_builder_submit_button")).click();
 			 extentTest.log(Status.FAIL, "fail to submit button");
+			 
 			}
 			
 	        @Test(priority=5)
-			 public void click_on_Fake_Pricing_page() {
-	        
+			 public void click_on_Fake_Pricing_page() throws Exception {
+	        	ScreenRecorderUtil.startRecord("click_on_Fake_Pricing_page");
 	        	extentTest = extent1.createTest("click on Fake pricing page datails");
 			driver.get("https://ultimateqa.com/automation/");
 			 extentTest.log(Status.PASS, "Browse to the 'Fake Pricing Page' " );
@@ -204,11 +196,15 @@ public class Ultimateqa_class {
 			// click on purchase button
 			driver.findElement(By.linkText("Purchase")).click();
 			 extentTest.log(Status.FAIL, "click on 'purchase package' " );
-		
-			 extentTest = extent1.createTest("Failed Test");
+			 ScreenRecorderUtil.stopRecord();
+			 extentTest = extent1.createTest("Failed Test purchase link");
 			 extentTest.log(Status. FAIL, "Purchase by-product is failed");
 				Assert.fail("Executing fail Test automation");
-				}
+			
+					
+	        
+	        }
+	        
 			@AfterTest
     public void tearDown() {
         // Close the browser
@@ -224,7 +220,6 @@ public class Ultimateqa_class {
 
 
     
-
 
 
 

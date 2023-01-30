@@ -9,7 +9,6 @@
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="click_on_Fake_Pricing_page"/>
-          <include name="Login_User_details"/>
         </methods>
       </class> <!-- Voss_Ultimate.Ultimateqa_class -->
     </classes>
@@ -22,7 +21,6 @@
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="click_on_Fake_Pricing_page"/>
-          <include name="Login_User_details"/>
         </methods>
       </class> <!-- Voss_Ultimate.Ultimateqa_class -->
     </classes>
